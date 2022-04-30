@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: green;
+    margin: 50px;
+}
+
+.estilo {
+    background-color: white;
+    width: 60%;
+    border-radius: 30px;
+    text-align: center;
+    padding: 30px;
+    font-size: 1.3em;
+}
+
+#texto-tarefa {
+height: 50px;
+width: 50%;
+}
+
+#criar-tarefa {
+    height: 50px;
+    padding: 10px;
+}
