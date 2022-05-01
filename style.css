@@ -40,9 +40,26 @@ font-size: 30px;
     font-size: 30px;
 }
 
+#remover-finalizados {
+    height: 60px;
+    padding: 10px;
+    background-color: rgb(53, 83, 231);
+    border-radius: 30px;
+    font-size: 30px;
+}
+
 #lista-tarefas {
 text-align: left;
 margin-left: 50px;
 font-size: 30px;
 padding: 20px;
 }
+
+.classGray {
+    background-color: gray;
+}
+
+.completed {
+text-decoration: line-through solid black;
+}
+
