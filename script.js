@@ -31,14 +31,9 @@ listaToDo.addEventListener('click', function bkgdGray(event){
  removeClassGray();
   let itemClicado = event.target;
   itemClicado.classList.add('classGray');
-  // if (itemClicado.classList.contains('classGray') === false) {
-  //   itemClicado.classList.add('classGray');
-  // } else if (itemClicado.classList.contains('classGray') === true) {
-  //   itemClicado.classList.remove('classGray')
-  // }
   });
 
-  // Deixar item da lista que for clicado riscado:
+// Deixar item da lista que for clicado riscado:
 listaToDo.addEventListener('dblclick', function riscarPalavra(event){
 let itemClicado = event.target;
 if (itemClicado.classList.contains('completed') === false) {
