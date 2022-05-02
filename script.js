@@ -19,13 +19,13 @@ botaoCriarTarefa.addEventListener('click', adicionaTarefa);
 // se eu chegar no requisito 12, eu uso o localstorage e a funcao criaLI.
 
 // Deixar com a cor de fundo cinza o item da lista que for clicado:
-const itensDaLista = document.getElementsByTagName('li');
+// const itensDaLista = document.getElementsByTagName('li');
 
 // listaToDo.addEventListener('click', function() {
-  
-    // if (itensDaLista[i].classList.contains('classGray') === true) {
-      for (let i = 0; i < listaToDo.childElementCount; i += 1) {
-        itensDaLista[i].classList.remove('classGray')}
+
+// if (itensDaLista[i].classList.contains('classGray') === true) {
+// for (let i = 0; i < listaToDo.childElementCount; i += 1) {
+//   itensDaLista[i].classList.remove('classGray')}
 //     //   }}
 //     let itemClicado = event.target;
 //     console.log(itemClicado);
@@ -74,4 +74,17 @@ function removeRiscados() {
 }
 
 const botaoLimparItensCompletos = document.getElementById('remover-finalizados');
-botaoLimparItensCompletos.addEventListener('click', removeRiscados)
+botaoLimparItensCompletos.addEventListener('click', removeRiscados);
+
+// Adicionando o botão salvar tarefas:
+function resgatarSalvos() {
+  if (localStorage.length > 0) {
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const chave = localStorage.key(i);
+      tarefas = JSON.parse(localStorage[chave]);
+      criaLi();
+    }
+  }
+}
+const botaoSalvarTarefas = document.getElementById('salvar-tarefas');
+botaoSalvarTarefas.addEventListener('click', resgatarSalvos);
